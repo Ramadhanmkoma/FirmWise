@@ -1,5 +1,9 @@
 # firmwise
 
+# Introduction
+
+The Zero Hunger solution aims to provide education and training about agriculture and livestock farming to farmers and agricultural workers in order to help reduce exploitation and promote sustainable farming practices. The solution will consist of a mobile-based system that includes features for crop cultivation, livestock farming, business management, education, and food.
+
 A new Flutter project.
 
 ## Getting Started

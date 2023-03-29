@@ -62,7 +62,7 @@ class Login extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 40),
                 child: Container(
-                  padding: EdgeInsets.only(top: 3, left: 3),
+                  padding: EdgeInsets.only(top: 1, left: 1),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(50),
                     border: Border(
@@ -78,7 +78,7 @@ class Login extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) => CatergoresPage()));
                     },
-                    color: Colors.greenAccent,
+                    color: Colors.green[800],
                     elevation: 0,
                     height: 60,
                     minWidth: double.infinity,
@@ -86,8 +86,11 @@ class Login extends StatelessWidget {
                         borderRadius: BorderRadius.circular(50)),
                     child: Text(
                       "Login",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),

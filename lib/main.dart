@@ -5,10 +5,13 @@ import 'package:firmwise/login.dart';
 import 'package:firmwise/signup.dart';
 import 'package:flutter/material.dart';
 
+import 'liveStockCategory.dart';
+
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: HomePage(),
+    // theme: ThemeData(brightness: Brightness.dark),
   ));
 }
 

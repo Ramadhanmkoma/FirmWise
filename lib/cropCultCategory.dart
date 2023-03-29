@@ -1,3 +1,5 @@
+import 'package:firmwise/crops/aboutBusiness.dart';
+import 'package:firmwise/mainCategory.dart';
 import 'package:flutter/material.dart';
 
 class SelectedCategory extends StatefulWidget {
@@ -15,9 +17,9 @@ class _SelectedCategoryState extends State<SelectedCategory> {
   ];
 
   List topics = [
-    'null',
-    'null',
-    'null',
+    'About Business',
+    'About agricultural education',
+    'About good food',
   ];
 
   @override
@@ -49,7 +51,7 @@ class _SelectedCategoryState extends State<SelectedCategory> {
                 contentPadding: EdgeInsets.all(0),
                 leading: CircleAvatar(
                   backgroundImage: AssetImage(
-                    'assets/images/algae.jpg',
+                    'assets/images/0.jpg',
                   ),
                   backgroundColor: Colors.grey[300],
                 ),
@@ -88,6 +90,13 @@ class _SelectedCategoryState extends State<SelectedCategory> {
                       ],
                     ),
                     child: ListTile(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AboutBusiness()),
+                        );
+                      },
                       leading: Container(
                         padding: EdgeInsets.fromLTRB(10, 10, 0, 10),
                         child: Text(

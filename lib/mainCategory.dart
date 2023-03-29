@@ -1,4 +1,5 @@
-import 'package:firmwise/selectedCategory.dart';
+import 'package:firmwise/cropCultCategory.dart';
+import 'package:firmwise/liveStockCategory.dart';
 import 'package:flutter/material.dart';
 // import 'package:percent_indicator/percent_indicator.dart';
 
@@ -50,6 +51,15 @@ class _MainDashboardState extends State<MainDashboard> {
             ),
           ),
           InkWell(
+            onTap: () => {
+              PopupMenuButton(
+                itemBuilder: (BuildContext context) {
+                  return List.generate(2, (index) {
+                    return const CheckedPopupMenuItem();
+                  });
+                },
+              )
+            },
             child: Container(
               margin: EdgeInsets.all(8),
               child: CircleAvatar(
@@ -57,6 +67,20 @@ class _MainDashboardState extends State<MainDashboard> {
                 backgroundColor: Colors.grey[300],
               ),
             ),
+          ),
+          PopupMenuButton(
+            itemBuilder: (BuildContext context) {
+              return List.generate(1, (index) {
+                return PopupMenuItem(
+                  child: Text(
+                    'Logout',
+                    style: TextStyle(color: Colors.redAccent[800]),
+                  ),
+                  onTap: () => Navigator.popUntil(context, (route) => false),
+                );
+              });
+            },
+            color: Colors.black,
           )
         ],
       ),
@@ -97,12 +121,21 @@ class _MainDashboardState extends State<MainDashboard> {
                       child: Material(
                         child: InkWell(
                           onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => SelectedCategory(),
-                              ),
-                            );
+                            if (index == 0) {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => SelectedCategory(),
+                                ),
+                              );
+                            } else {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => LiveStockCategory(),
+                                ),
+                              );
+                            }
                           },
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -201,7 +234,7 @@ class _MainDashboardState extends State<MainDashboard> {
           )
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.green[800],
         onTap: _onItemTapped,
       ),
     );
