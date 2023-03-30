@@ -128,6 +128,28 @@ class _LiveStockCategoryState extends State<LiveStockCategory> {
           ),
         ),
       ),
+      persistentFooterButtons: <Widget>[
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.location_on),
+          color: Colors.amber[800],
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.call),
+          color: Colors.blue[800],
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.message),
+          color: Colors.green[800],
+        ),
+        IconButton(
+          onPressed: () {},
+          icon: Icon(Icons.help, key: Key('help')),
+          color: Colors.red[800],
+        ),
+      ],
     );
   }
 }

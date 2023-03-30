@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 
-class AboutBusiness extends StatelessWidget {
-  const AboutBusiness({super.key});
+class Fertilizer extends StatelessWidget {
+  const Fertilizer({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // leading: IconButton(
-        //   onPressed: () {},
-        //   icon: Icon(Icons.menu),
-        // ),
         title: Text(
-          'About Business',
+          'Getting Fertilizer',
           style: TextStyle(
             fontWeight: FontWeight.normal,
             color: Colors.black,

@@ -7,20 +7,21 @@ class AboutBusiness extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // leading: IconButton(
+        //   onPressed: () {},
+        //   icon: Icon(Icons.menu),
+        // ),
         title: Text(
           'About Business',
           style: TextStyle(
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.normal,
             color: Colors.black,
           ),
         ),
         actions: <Widget>[
-          PopupMenuButton(
-            itemBuilder: (BuildContext context) {
-              return List.generate(5, (index) {
-                return CheckedPopupMenuItem();
-              });
-            },
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.search),
           ),
         ],
         elevation: 0,

@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 
-class AboutBusiness extends StatelessWidget {
-  const AboutBusiness({super.key});
+class LivestockBusiness extends StatelessWidget {
+  const LivestockBusiness({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // leading: IconButton(
-        //   onPressed: () {},
-        //   icon: Icon(Icons.menu),
-        // ),
         title: Text(
           'About Business',
           style: TextStyle(
@@ -22,13 +18,6 @@ class AboutBusiness extends StatelessWidget {
           IconButton(
             onPressed: () {},
             icon: Icon(Icons.search),
-          ),
-          PopupMenuButton(
-            itemBuilder: (BuildContext context) {
-              return List.generate(5, (index) {
-                return CheckedPopupMenuItem();
-              });
-            },
           ),
         ],
         elevation: 0,

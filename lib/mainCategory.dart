@@ -1,5 +1,6 @@
 import 'package:firmwise/cropCultCategory.dart';
 import 'package:firmwise/liveStockCategory.dart';
+import 'package:firmwise/login.dart';
 import 'package:flutter/material.dart';
 // import 'package:percent_indicator/percent_indicator.dart';
 
@@ -74,9 +75,14 @@ class _MainDashboardState extends State<MainDashboard> {
                 return PopupMenuItem(
                   child: Text(
                     'Logout',
-                    style: TextStyle(color: Colors.redAccent[800]),
+                    style: TextStyle(color: Colors.redAccent),
                   ),
-                  onTap: () => Navigator.popUntil(context, (route) => false),
+                  onTap: () => Navigator.pop(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Login(),
+                    ),
+                  ),
                 );
               });
             },
@@ -179,26 +185,6 @@ class _MainDashboardState extends State<MainDashboard> {
                                       color: Colors.grey[300],
                                       height: 25,
                                     ),
-                                    // Row(
-                                    //   children: <Widget>[
-                                    //     Expanded(
-                                    //       child: Container(
-                                    //         margin: EdgeInsets.only(right: 10),
-                                    //         child: LinearPercentIndicator(
-                                    //           animation: true,
-                                    //           lineHeight: 5.0,
-                                    //           animationDuration: 2500,
-                                    //           percent: 0.5,
-                                    //           backgroundColor: Colors.grey[200],
-                                    //           linearStrokeCap:
-                                    //               LinearStrokeCap.roundAll,
-                                    //           progressColor: Theme.of(context)
-                                    //               .primaryColor,
-                                    //         ),
-                                    //       ),
-                                    //     )
-                                    //   ],
-                                    // )
                                   ],
                                 ),
                               )
@@ -212,6 +198,27 @@ class _MainDashboardState extends State<MainDashboard> {
               )
             ],
           ),
+        ),
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.only(top: 3.0, bottom: 5.0),
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('FirmWise'),
+              decoration: BoxDecoration(
+                color: Color.fromARGB(255, 48, 204, 128),
+              ),
+            ),
+            ListTile(
+              title: Text('FAQ'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text('Help'),
+              onTap: () {},
+            ),
+          ],
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(

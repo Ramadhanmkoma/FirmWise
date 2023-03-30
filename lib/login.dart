@@ -136,7 +136,12 @@ class Login extends StatelessWidget {
         SizedBox(
           height: 5,
         ),
-        TextField(
+        TextFormField(
+          validator: (value) {
+            if (value!.isEmpty) {
+              return 'Please fill the form';
+            }
+          },
           obscureText: obsecureText,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),

@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 
-class AboutBusiness extends StatelessWidget {
-  const AboutBusiness({super.key});
+class BreedingMethod extends StatelessWidget {
+  const BreedingMethod({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // leading: IconButton(
-        //   onPressed: () {},
-        //   icon: Icon(Icons.menu),
-        // ),
         title: Text(
-          'About Business',
+          'Breeding Method',
           style: TextStyle(
             fontWeight: FontWeight.normal,
             color: Colors.black,
@@ -25,7 +21,7 @@ class AboutBusiness extends StatelessWidget {
           ),
           PopupMenuButton(
             itemBuilder: (BuildContext context) {
-              return List.generate(5, (index) {
+              return List.generate(2, (index) {
                 return CheckedPopupMenuItem();
               });
             },
