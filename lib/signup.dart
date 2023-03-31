@@ -1,139 +1,126 @@
+import 'package:firmwise/login.dart';
 import 'package:flutter/material.dart';
 
-class SignupPage extends StatelessWidget {
-  const SignupPage({Key? key}) : super(key: key);
+class SignupPage extends StatefulWidget {
+  @override
+  _SignupPageState createState() => _SignupPageState();
+}
+
+class _SignupPageState extends State<SignupPage> {
+  final _formKey = GlobalKey<FormState>();
+  late String _name;
+  late String _email;
+  late String _password;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        brightness: Brightness.light,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back_ios,
-            size: 20,
-            color: Colors.black,
+        title: Text('Sign Up'),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.help_outline_rounded,
+              color: Colors.redAccent,
+            ),
           ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
+        ],
       ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 40),
-          height: MediaQuery.of(context).size.height,
-          width: double.infinity,
+      body: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Form(
+          key: _formKey,
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Column(
-                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Text(
-                    "Sign up",
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    "Create an account",
-                    style: TextStyle(fontSize: 15, color: Colors.grey[700]),
-                  )
-                ],
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Full Name',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Please enter your name';
+                  }
+                  return null;
+                },
+                onSaved: (value) {
+                  _name = value!;
+                },
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40),
-                child: Column(
-                  children: <Widget>[
-                    makeInput(label: "Email"),
-                    makeInput(label: "Password", obsecureText: true),
-                    makeInput(label: "Confirm Password", obsecureText: true),
-                  ],
+              SizedBox(height: 20.0),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Email',
+                  border: OutlineInputBorder(),
+                ),
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Please enter your email';
+                  }
+                  return null;
+                },
+                onSaved: (value) {
+                  _email = value!;
+                },
+              ),
+              SizedBox(height: 20.0),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Password',
+                  border: OutlineInputBorder(),
+                ),
+                obscureText: true,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Please enter your password';
+                  }
+                  return null;
+                },
+                onSaved: (value) {
+                  _password = value!;
+                },
+              ),
+              SizedBox(height: 20.0),
+              TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'Re-type Password',
+                  border: OutlineInputBorder(),
+                ),
+                obscureText: true,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Please enter your password';
+                  }
+                  return null;
+                },
+                onSaved: (value) {
+                  _password = value!;
+                },
+              ),
+              SizedBox(height: 20.0),
+              MaterialButton(
+                color: Colors.blue,
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState?.save();
+                    // TODO: Implement sign up logic
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Login()),
+                    );
+                  }
+                },
+                child: Text(
+                  'Sign Up',
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 40),
-                child: Container(
-                  padding: EdgeInsets.only(top: 3, left: 3),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    border: Border(
-                        bottom: BorderSide(color: Colors.black),
-                        top: BorderSide(color: Colors.black),
-                        left: BorderSide(color: Colors.black),
-                        right: BorderSide(color: Colors.black)),
-                  ),
-                  child: MaterialButton(
-                    onPressed: () {},
-                    color: Colors.yellow,
-                    elevation: 0,
-                    height: 60,
-                    minWidth: double.infinity,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Text(
-                      "Login",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-                    ),
-                  ),
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text("have an account? "),
-                  Text(
-                    "Login",
-                    style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
-                  )
-                ],
-              )
             ],
           ),
         ),
       ),
-    );
-  }
-
-  Widget makeInput({label, obsecureText = false}) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          label,
-          style: TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.w400,
-            color: Colors.black87,
-          ),
-        ),
-        SizedBox(
-          height: 5,
-        ),
-        TextField(
-          obscureText: obsecureText,
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
-            enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.grey),
-            ),
-            border:
-                OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
-          ),
-        ),
-        SizedBox(
-          height: 30,
-        )
-      ],
     );
   }
 }

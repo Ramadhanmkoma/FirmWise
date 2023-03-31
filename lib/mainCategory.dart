@@ -1,5 +1,9 @@
+import 'package:firmwise/About.dart';
+import 'package:firmwise/Setting.dart';
 import 'package:firmwise/cropCultCategory.dart';
+import 'package:firmwise/cropView.dart';
 import 'package:firmwise/liveStockCategory.dart';
+import 'package:firmwise/liveStockView.dart';
 import 'package:firmwise/login.dart';
 import 'package:flutter/material.dart';
 // import 'package:percent_indicator/percent_indicator.dart';
@@ -28,6 +32,17 @@ class _MainDashboardState extends State<MainDashboard> {
     setState(() {
       _selectedIndex = index;
     });
+
+    if (index == 0) {
+      Navigator.push(
+          context, MaterialPageRoute(builder: ((context) => MainDashboard())));
+    } else if (index == 1) {
+      Navigator.push(
+          context, MaterialPageRoute(builder: ((context) => AboutPage())));
+    } else if (index == 2) {
+      Navigator.push(
+          context, MaterialPageRoute(builder: ((context) => SettingsPage())));
+    }
   }
 
   @override
@@ -38,11 +53,11 @@ class _MainDashboardState extends State<MainDashboard> {
         title: Text(
           'Home',
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+        backgroundColor: Theme.of(context).primaryColor,
+        elevation: 1.5,
         actions: <Widget>[
           IconButton(
             onPressed: () {},
@@ -53,12 +68,9 @@ class _MainDashboardState extends State<MainDashboard> {
           ),
           InkWell(
             onTap: () => {
-              PopupMenuButton(
-                itemBuilder: (BuildContext context) {
-                  return List.generate(2, (index) {
-                    return const CheckedPopupMenuItem();
-                  });
-                },
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AboutPage()),
               )
             },
             child: Container(
@@ -131,14 +143,14 @@ class _MainDashboardState extends State<MainDashboard> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => SelectedCategory(),
+                                  builder: (context) => CropView(),
                                 ),
                               );
                             } else {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => LiveStockCategory(),
+                                  builder: (context) => LiveStockView(),
                                 ),
                               );
                             }
@@ -222,14 +234,20 @@ class _MainDashboardState extends State<MainDashboard> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        iconSize: 30,
+        backgroundColor: Colors.green,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+              // color: Colors.white,
+            ),
             label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.person_2_rounded,
+              // color: Colors.white,
             ),
             label: 'About',
           ),
@@ -238,10 +256,10 @@ class _MainDashboardState extends State<MainDashboard> {
               Icons.settings,
             ),
             label: 'Setting',
-          )
+          ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.green[800],
+        selectedItemColor: Color.fromARGB(255, 255, 255, 255),
         onTap: _onItemTapped,
       ),
     );

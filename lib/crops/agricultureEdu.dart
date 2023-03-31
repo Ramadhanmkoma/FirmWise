@@ -56,7 +56,7 @@ class AboutBusiness extends StatelessWidget {
               Icons.settings,
             ),
             label: 'Setting',
-          )
+          ),
         ],
         // currentIndex: ,
         selectedItemColor: Colors.green[800],

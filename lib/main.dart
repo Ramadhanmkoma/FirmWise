@@ -1,3 +1,4 @@
+import 'package:firmwise/cropView.dart';
 import 'package:firmwise/helper/ColorSys.dart';
 import 'package:firmwise/helper/Strings.dart';
 import 'package:firmwise/landing.dart';
