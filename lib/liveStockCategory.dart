@@ -1,3 +1,6 @@
+import 'package:firmwise/livestock/breeding-method.dart';
+import 'package:firmwise/livestock/business.dart';
+import 'package:firmwise/livestock/fertilizer.dart';
 import 'package:flutter/material.dart';
 
 class LiveStockCategory extends StatefulWidget {
@@ -88,7 +91,36 @@ class _LiveStockCategoryState extends State<LiveStockCategory> {
                       ],
                     ),
                     child: ListTile(
-                      onTap: () {},
+                      onTap: () {
+                        if (index == 0) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LivestockBusiness(
+                                animalName: 'Yak',
+                              ),
+                            ),
+                          );
+                        } else if (index == 1) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => BreedingMethod(
+                                animalName: 'Yak',
+                              ),
+                            ),
+                          );
+                        } else {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => GettingFertilizer(
+                                animalName: 'Yak',
+                              ),
+                            ),
+                          );
+                        }
+                      },
                       leading: Container(
                         padding: EdgeInsets.fromLTRB(10, 10, 0, 10),
                         child: Text(

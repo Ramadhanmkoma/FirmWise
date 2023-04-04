@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class BreedingMethod extends StatelessWidget {
-  final String cropName;
+  final String animalName;
 
-  BreedingMethod({required this.cropName});
+  BreedingMethod({required this.animalName});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('$cropName - About Business'),
+        title: Text('$animalName - Breeding Methods'),
         backgroundColor: Colors.transparent,
         iconTheme: IconThemeData(color: Colors.black),
       ),
@@ -19,7 +19,7 @@ class BreedingMethod extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Introduction to $cropName Business',
+              'Introduction to $animalName Breeding Methods',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10),

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
 class LivestockBusiness extends StatelessWidget {
-  const LivestockBusiness({super.key});
+  final String animalName;
+  LivestockBusiness({required this.animalName});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'About Business',
+          'About Business - $animalName',
           style: TextStyle(
             fontWeight: FontWeight.normal,
             color: Colors.black,
@@ -25,7 +26,12 @@ class LivestockBusiness extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.all(5),
+          padding: EdgeInsets.all(15),
+          child: Column(
+            children: <Widget>[
+              Image.asset('assets/livestock-images/yak.jpg'),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
