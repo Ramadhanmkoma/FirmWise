@@ -15,6 +15,8 @@ class LivestockBusiness extends StatelessWidget {
             color: Colors.black,
           ),
         ),
+        backgroundColor: Colors.transparent,
+        iconTheme: IconThemeData(color: Colors.black),
         actions: <Widget>[
           IconButton(
             onPressed: () {},

@@ -14,6 +14,8 @@ class _CropViewState extends State<CropView> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Available Crops'),
+        backgroundColor: Colors.green,
+        iconTheme: IconThemeData(color: Colors.black),
         actions: [
           IconButton(
             onPressed: () {},

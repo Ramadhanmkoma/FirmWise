@@ -56,6 +56,7 @@ class _MainDashboardState extends State<MainDashboard> {
             color: Colors.white,
           ),
         ),
+        iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Colors.green,
         elevation: 1.5,
         actions: <Widget>[
@@ -229,6 +230,16 @@ class _MainDashboardState extends State<MainDashboard> {
             ),
             ListTile(
               title: Text('Help'),
+              onTap: () {},
+            ),
+            ListTile(
+              title: Text(
+                'Logout',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               onTap: () {},
             ),
           ],
