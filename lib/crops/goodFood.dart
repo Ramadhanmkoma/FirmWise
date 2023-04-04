@@ -22,16 +22,8 @@ class GoodFood extends StatelessWidget {
             onPressed: () {},
             icon: Icon(Icons.search),
           ),
-          PopupMenuButton(
-            itemBuilder: (BuildContext context) {
-              return List.generate(5, (index) {
-                return CheckedPopupMenuItem();
-              });
-            },
-          ),
         ],
         elevation: 0,
-        // backgroundColor: Colors.transparent,
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -39,8 +31,11 @@ class GoodFood extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Image.asset('assets/crop-images/3.jpeg'),
+              SizedBox(
+                height: 20,
+              ),
               Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium ullamcorper ante, ac mattis sapien. Nunc gravida auctor justo, vel laoreet felis rhoncus in. Integer sit amet eleifend velit. Curabitur fringilla nisl eget elit maximus suscipit. Donec posuere tortor in urna posuere aliquam. Donec a fringilla justo. Vivamus eget tellus eu tellus finibus bibendum eu ac justo. In dapibus nisi nunc, at faucibus odio hendrerit a. Aenean bibendum ex nec enim malesuada, quis rhoncus justo eleifend. Nam quis imperdiet arcu, sit amet pellentesque turpis.',
+                'Coconuts are not only delicious and versatile, but they also offer numerous health benefits. Coconuts are a rich source of vitamins and minerals, including vitamin C, potassium, magnesium, and copper. They are also high in fiber and healthy fats, which can help reduce cholesterol levels and support heart health. Coconut meat, water, and oil can be used in a variety of dishes, from sweet to savory, and can be enjoyed in many different ways. Additionally, coconut oil has antimicrobial properties and can be used in natural beauty products for hair and skin care. By incorporating coconuts into your diet, you can enjoy a tasty and nutritious food that offers a wide range of benefits for your health and well-being.',
                 style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
               )
             ],

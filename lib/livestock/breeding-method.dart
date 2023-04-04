@@ -29,7 +29,7 @@ class BreedingMethod extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Text(
-              'Market Analysis',
+              'Methods',
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10),

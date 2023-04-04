@@ -219,7 +219,13 @@ class _MainDashboardState extends State<MainDashboard> {
           padding: EdgeInsets.only(top: 3.0, bottom: 5.0),
           children: <Widget>[
             DrawerHeader(
-              child: Text('FirmWise'),
+              child: Text(
+                'FirmWise',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 48, 204, 128),
               ),

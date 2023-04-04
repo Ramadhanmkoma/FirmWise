@@ -27,7 +27,7 @@ class CropEducationPage extends StatelessWidget {
             ),
             SizedBox(height: 16.0),
             Text(
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium ullamcorper ante, ac mattis sapien. Nunc gravida auctor justo, vel laoreet felis rhoncus in. Integer sit amet eleifend velit. Curabitur fringilla nisl eget elit maximus suscipit. Donec posuere tortor in urna posuere aliquam. Donec a fringilla justo. Vivamus eget tellus eu tellus finibus bibendum eu ac justo. In dapibus nisi nunc, at faucibus odio hendrerit a. Aenean bibendum ex nec enim malesuada, quis rhoncus justo eleifend. Nam quis imperdiet arcu, sit amet pellentesque turpis.',
+              'Coconut is a versatile crop with many uses, and proper education is important for successful cultivation. In this subcategory, you will find educational resources on all aspects of coconut farming, including planting techniques, soil preparation, fertilization, pest management, and harvesting methods. You\'ll also find information on how to identify and manage common diseases and pests that affect coconut crops, as well as tips for increasing yield and improving the quality of your harvest. Whether you\'re a beginner or an experienced farmer, the educational resources in this subcategory will help you improve your knowledge and skills in coconut cultivation.',
               style: TextStyle(
                 fontSize: 16.0,
               ),
