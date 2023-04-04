@@ -22,7 +22,6 @@ This is the official repository for the GDSC Mobile App Solution, developed by [
   - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -50,15 +49,31 @@ To get a local copy of this project, follow these simple steps.
 
 1. Clone the repository to your local machine using the following command:
 
-## Getting Started
+git clone https://github.com/Ramadhanmkoma/firmwise.git
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+2. Change into the project directory using the following command:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+cd gdsc-mobile-app-solution
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+3. Install the required dependencies using the following command:
+
+flutter pub get
+
+
+## Usage
+
+1. Connect your Android or iOS device to your machine.
+2. Run the following command to launch the application:
+
+flutter run
+
+
+3. The application should now be running on your device.
+
+<!-- ## Contributing -->
+
+<!-- We welcome contributions from anyone interested in improving this project. Please see our [contributing guidelines](CONTRIBUTING.md) for more information. -->
+
+
