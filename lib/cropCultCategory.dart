@@ -1,4 +1,6 @@
 import 'package:firmwise/crops/aboutBusiness.dart';
+import 'package:firmwise/crops/agricultureEdu.dart';
+import 'package:firmwise/crops/goodFood.dart';
 import 'package:firmwise/mainCategory.dart';
 import 'package:flutter/material.dart';
 
@@ -91,11 +93,31 @@ class _SelectedCategoryState extends State<SelectedCategory> {
                     ),
                     child: ListTile(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => AboutBusiness()),
-                        );
+                        if (index == 0) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CropAboutBusinessPage(
+                                      cropName: 'Coconut',
+                                    )),
+                          );
+                        } else if (index == 1) {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => CropEducationPage(
+                                      cropName: 'Coconut',
+                                    )),
+                          );
+                        } else {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => GoodFood(
+                                      cropName: 'Coconut',
+                                    )),
+                          );
+                        }
                       },
                       leading: Container(
                         padding: EdgeInsets.fromLTRB(10, 10, 0, 10),

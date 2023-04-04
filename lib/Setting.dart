@@ -12,6 +12,7 @@ class _SettingsPageState extends State<SettingsPage> {
   bool _notifications = false;
   bool _darkMode = false;
   bool _locationServices = false;
+  bool _language = false;
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,7 @@ class _SettingsPageState extends State<SettingsPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Settings'),
+        backgroundColor: Colors.green,
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 16, horizontal: 24),
@@ -74,6 +76,26 @@ class _SettingsPageState extends State<SettingsPage> {
                   onChanged: (value) {
                     setState(() {
                       _locationServices = value;
+                    });
+                  },
+                ),
+              ],
+            ),
+            SizedBox(height: 24),
+            Text(
+              'Language Settings',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('Kiswahili'),
+                Switch(
+                  value: _language,
+                  onChanged: (value) {
+                    setState(() {
+                      _language = value;
                     });
                   },
                 ),

@@ -10,6 +10,7 @@ class AboutPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('About'),
+        backgroundColor: Colors.green,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,

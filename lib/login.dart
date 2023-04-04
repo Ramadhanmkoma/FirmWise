@@ -29,6 +29,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Login'),
+        backgroundColor: Colors.green,
       ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
@@ -70,7 +71,7 @@ class _LoginState extends State<Login> {
               ),
               SizedBox(height: 32.0),
               MaterialButton(
-                color: Theme.of(context).primaryColor,
+                color: Colors.green,
                 textColor: Colors.white,
                 onPressed: _submitForm,
                 child: Text('Login'),

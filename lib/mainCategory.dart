@@ -56,7 +56,7 @@ class _MainDashboardState extends State<MainDashboard> {
             color: Colors.white,
           ),
         ),
-        backgroundColor: Theme.of(context).primaryColor,
+        backgroundColor: Colors.green,
         elevation: 1.5,
         actions: <Widget>[
           IconButton(
@@ -104,6 +104,7 @@ class _MainDashboardState extends State<MainDashboard> {
       ),
       body: SingleChildScrollView(
         child: Container(
+          color: Colors.white,
           padding: EdgeInsets.all(15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
