@@ -9,8 +9,12 @@ class CropAboutBusinessPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('$cropName - About Business'),
+        title: Text(
+          '$cropName - About Business',
+          style: TextStyle(color: Colors.black),
+        ),
         backgroundColor: Colors.transparent,
+        elevation: 0,
         iconTheme: IconThemeData(color: Colors.black),
       ),
       body: Container(

@@ -43,7 +43,7 @@ class GettingFertilizer extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium ullamcorper ante, ac mattis sapien. Nunc gravida auctor justo, vel laoreet felis rhoncus in. Integer sit amet eleifend velit. Curabitur fringilla nisl eget elit maximus suscipit. Donec posuere tortor in urna posuere aliquam. Donec a fringilla justo. Vivamus eget tellus eu tellus finibus bibendum eu ac justo. In dapibus nisi nunc, at faucibus odio hendrerit a. Aenean bibendum ex nec enim malesuada, quis rhoncus justo eleifend. Nam quis imperdiet arcu, sit amet pellentesque turpis.',
+                'Yaks require a balanced nutrient supply for healthy growth and optimal productivity. Providing the right type and amount of fertilizer can improve the quality and quantity of the forage, which is the primary source of nutrition for yaks. Commonly used fertilizers for yak pasture include nitrogen, phosphorus, and potassium. It is important to consult with a local agricultural expert to determine the appropriate type and amount of fertilizer to use for your specific soil and climatic conditions. Proper application timing and techniques are also crucial for maximizing the benefits of fertilization while minimizing the risk of environmental damage.',
                 style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.normal),
               )
             ],

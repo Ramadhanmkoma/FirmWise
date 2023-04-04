@@ -24,19 +24,10 @@ class BreedingMethod extends StatelessWidget {
             ),
             SizedBox(height: 10),
             Text(
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at elit at elit placerat sagittis. Curabitur vulputate dui eu gravida aliquam. Duis tristique felis in facilisis luctus. Aliquam rutrum lacinia interdum. Morbi consectetur mi quis sapien scelerisque, vel rhoncus quam ultricies. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec in nibh velit. Mauris suscipit efficitur lacus, sed molestie ipsum ullamcorper eu. In semper eros in odio varius aliquam.',
+              'Breeding methods for Yak livestock involve both natural and artificial insemination. Artificial insemination is used to improve the genetic quality of the herd by introducing desirable traits, such as increased milk production or disease resistance. It also allows for the use of high-quality breeding stock from other herds. Natural breeding is still commonly used, especially in traditional herding communities. Breeding practices may vary depending on the specific needs and goals of the herd, and may involve selective breeding, crossbreeding, or other techniques. Proper care and management of breeding animals is essential to ensure healthy offspring and maintain the genetic diversity of the herd.',
               style: TextStyle(fontSize: 16),
             ),
             SizedBox(height: 20),
-            Text(
-              'Methods',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 10),
-            Text(
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at elit at elit placerat sagittis. Curabitur vulputate dui eu gravida aliquam. Duis tristique felis in facilisis luctus. Aliquam rutrum lacinia interdum. Morbi consectetur mi quis sapien scelerisque, vel rhoncus quam ultricies. Suspendisse potenti. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec in nibh velit. Mauris suscipit efficitur lacus, sed molestie ipsum ullamcorper eu. In semper eros in odio varius aliquam.',
-              style: TextStyle(fontSize: 16),
-            ),
           ],
         ),
       ),
